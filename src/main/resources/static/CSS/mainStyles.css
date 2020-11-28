@@ -30,7 +30,7 @@ body{
 .navbar ul li a:hover{
 	color: #2F2F2D;
 }
-.h1 {
+.hi {
 	padding-top: 10%;
 	text-align: center;
 }
@@ -52,4 +52,8 @@ body{
 .question{
 	color: #BDF040;
 	background: black;
+}
+
+.center{
+    text-align: center;
 }

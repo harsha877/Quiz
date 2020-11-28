@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="stylesheet" type="text/css" href="/CSS/defaults.css">
 <link rel="stylesheet" type="text/css" href="/CSS/mainStyles.css">
 </head>
 
@@ -12,9 +13,9 @@
 		</ul>
 	</div>
 
-	<form action="/quiz">
+	<form class="center" action="/quiz">
 	<h1 class="hi">Hi ${name}</h1>
-	<button value="start">start Quiz</button>
+	<div class="center"><button value="start">start Quiz</button></div>
 	</form>
 </body>
 </html>
