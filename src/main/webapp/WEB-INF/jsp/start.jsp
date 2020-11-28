@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="/CSS/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="/css/mainStyles.css">
 </head>
 <body>
 	<div class="navbar">

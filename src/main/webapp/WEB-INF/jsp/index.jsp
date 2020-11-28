@@ -1,7 +1,7 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href="/CSS/mainStyles.css">
-<link rel="stylesheet" type="text/css" href="/CSS/login.css">
+<link rel="stylesheet" type="text/css" href="/css/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="/css/login.css">
 </head>
 <body>
 	<div class="navbar">
