@@ -1,34 +1,16 @@
+<html>
 <head>
-	<style>
-body{
-	margin: 0;
-	padding: 0;
-}
-.login {
-	margin-top: 50px;
-	margin-left: 300px;
-	width: 500px;
-	height: 400px;
-  	background-color: #F3EFF0;
-  	border-radius: 5px;
-  	padding-left: 200px;
-  	border: 1px solid black;
-}
-.login form div div label{
-	text-align: left;
-}
-
-.login form div {
-	padding: 1px;
-
-}
-.login form div a{
-	text-decoration: none;
-}
-
-</style>
+<link rel="stylesheet" type="text/css" href="/CSS/mainStyles.css">
+<link rel="stylesheet" type="text/css" href="/CSS/login.css">
 </head>
 <body>
+    <div class="navbar">
+            <ul>
+    			<li><a href="/home">Quiz</a></li>
+    			<li><a href="/home/login">Login </a></li>
+    			<li><a href="/home/sign">Sign Up</a></li>
+    		</ul>
+    </div>
 	<div class="login">
 		<form action="/home/login" method="post">
 			<h1>Login</h1>
@@ -48,3 +30,4 @@ body{
 
 	</div>
 </body>
+</html>
