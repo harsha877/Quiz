@@ -15,9 +15,10 @@ public class LoginController {
 
     @Autowired
     public LoginService loginService;
+
     @GetMapping
-    public String home(){
-        return loginService.homeService();
+    public String home(HttpSession httpSession){
+        return  Objects.isNull(httpSession.getAttribute("name"))?"login":"userHome";
     }
 
     @GetMapping("/login")
@@ -47,10 +48,11 @@ public class LoginController {
         httpSession.invalidate();
         return "index";
     }
-    @GetMapping("/test")
-    public String test(HttpSession httpSession){
+
+    @GetMapping("/nav")
+    public String navbar(HttpSession httpSession){
         httpSession.setAttribute("value","i am from session");
-        return "ok";
+        return "navbar";
     }
 
 }

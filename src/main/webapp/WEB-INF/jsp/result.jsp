@@ -1,14 +1,15 @@
 <html>
 <head>
 <link rel="stylesheet" type="text/css" href="/css/mainStyles.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+   $("#header").load("../home/nav");
+  });
+</script>
 </head>
 <body>
-	<div class="navbar">
-
-		<ul>
-			<li><a href="/home/login">Quiz</a></li>
-			<li><a href="/home/signout">Sign out</a></li>
-		</ul>
+	<div id="header"></div>
 	</div>
 	<div class="results">
 		<table style="width:100%">

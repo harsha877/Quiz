@@ -2,15 +2,15 @@
 <head>
 <link rel="stylesheet" type="text/css" href="/css/mainStyles.css">
 <link rel="stylesheet" type="text/css" href="/css/login.css">
+<script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+<script type="text/javascript">
+ $(document).ready(function(){
+   $("#header").load("../home/nav");
+  });
+</script>
 </head>
 <body>
-    <div class="navbar">
-            <ul>
-    			<li><a href="/home">Quiz</a></li>
-    			<li><a href="/home/login">Login </a></li>
-    			<li><a href="/home/sign">Sign Up</a></li>
-    		</ul>
-    </div>
+    <div id="header"></div>
 	<div class="login">
 		<form action="/home/login" method="post">
 			<h1>Login</h1>
