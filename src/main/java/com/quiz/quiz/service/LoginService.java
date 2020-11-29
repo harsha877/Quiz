@@ -27,12 +27,8 @@ public class LoginService {
         }
     }
 
-    public String homeService(){
-        return "index";
-    }
     public String signService(String name, String username, String password, HttpSession httpSession){
-        //Class<? extends Optional> id = userRepository.findAll().stream().sorted((user, a) -> user.getId()>=a.getId()?-1:1).findFirst();
-        //System.out.println(id);
+
         User user = new User(name,username,password,null,null);
         userRepository.save(user);
         httpSession.setAttribute("name",user.getName());

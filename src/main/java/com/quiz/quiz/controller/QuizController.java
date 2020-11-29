@@ -31,9 +31,10 @@ public class QuizController {
     }
 
     @PostMapping("/next")
-    public String nextQuestion(@RequestParam("question") int id,@RequestParam("option") String  option, HttpSession httpSession){
+    public String nextQuestion(@RequestParam("question") int id,@RequestParam("option") String  option
+            ,@RequestParam("next") String next, HttpSession httpSession){
         if (isSessionActive(httpSession)){
-            return quizService.nextQuestion(httpSession,id,option);
+            return quizService.nextQuestion(httpSession,id,option,next);
         }else{
             return "index";
         }
