@@ -39,7 +39,7 @@ public class QuizService {
         httpSession.setAttribute("quizobject",quiz);
         return null;
     }
-    public static void setNextQuestion(Quiz quiz,HttpSession httpSession){
+    public void setNextQuestion(Quiz quiz,HttpSession httpSession){
         if(quiz.getNext() < quiz.getTotal()){
         quiz.setCrrentQuestion(quiz.getQuestion().get(quiz.getNext()));
         setQuestion(httpSession,quiz);
@@ -58,7 +58,7 @@ public class QuizService {
         }
     }
 
-    public static void setQuestion(HttpSession httpSession, Quiz quiz){
+    public void setQuestion(HttpSession httpSession, Quiz quiz){
         httpSession.setAttribute("currentQuestion",quiz.getCrrentQuestion().getQuestion());
         httpSession.setAttribute("id",quiz.getNext());
         httpSession.setAttribute("o1",quiz.getCrrentQuestion().getO1());
@@ -68,7 +68,7 @@ public class QuizService {
         httpSession.setAttribute("focus",getFocusID(quiz));
     }
 
-    public static String getFocusID(Quiz quiz){
+    public String getFocusID(Quiz quiz){
 
         return (quiz.getUserAnswers().size()<=quiz.getNext()?
                 "0":quiz.getUserAnswers().get(quiz.getNext()));
@@ -84,7 +84,7 @@ public class QuizService {
 
     }
 
-    public static void calculateResult(Quiz quiz){
+    public void calculateResult(Quiz quiz){
         Results results=quiz.getResults();
         quiz.setResults(results);
         int unAnswred=0,correct=0,wrong=0;
@@ -103,7 +103,7 @@ public class QuizService {
 
     }
 
-    public static void setUserResponse(Quiz quiz,int id,String option){
+    public void setUserResponse(Quiz quiz,int id,String option){
         if(id>=quiz.getUserAnswers().size())
             quiz.getUserAnswers().add(id,option);
         else
